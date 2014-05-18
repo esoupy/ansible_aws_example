@@ -1,7 +1,7 @@
-ANSIBLE AWS PRIMER
-==================
+ANSIBLE AWS EXAMPLES
+====================
 
-A collection of ansible playbook samples for AWS related tasks.
+A collection of ansible playbook examples for AWS related tasks.
 
 Requirements
 ------------
@@ -21,7 +21,6 @@ It is recommended to install in a virtualenv
 playbook_ec2_launch
 -------------------
 Template to create new ec2 instances within a VPC and apply a common role
-
 
 
 
