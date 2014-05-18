@@ -1,0 +1,32 @@
+---
+## Update accordingly to your AWS resources
+
+region:  # us-west-2
+vpcid:   # vpc-ID
+subnet:  # subnet-ID
+
+key_name:  # Name of Key
+
+security_groups:
+# by id or name
+  #- sg-ID
+  #- sg-ID
+
+volumes:
+#  root volume size
+- device_name: /dev/sda1
+  volume_size: 18
+  delete_on_termination: true
+# add any additional ebs volumes
+# Example:
+- device_name: /dev/sdf
+  volume_size: 18
+  delete_on_termination: true
+
+
+# default type
+type: t1.micro
+
+## Add AWS Tags to customize descriptions and API processing
+tags:
+  role: backend

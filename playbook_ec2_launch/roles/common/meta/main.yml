@@ -1,0 +1,7 @@
+## used to define role dependancies
+# If any dependancies are listed, facts will be gathered to verify required roles
+#
+# example:
+#---
+#dependancies:
+#  - { role: some_required_role }

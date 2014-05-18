@@ -1,0 +1,13 @@
+# Handlers are exectued from the notify command under tasks 
+# They are only processed when a state has changed
+#
+# Example:
+#  We have under the tasks/main.yml file:
+#  - name: config ntp
+#    template: src=ntp.conf.j2 dest=/etc/ntp.conf
+#    notify:
+#      - restart ntpd
+#
+#  Then under the handlers/main.yml file
+#  - name: restart ntpd
+#    service: name=ntpd state=restarted

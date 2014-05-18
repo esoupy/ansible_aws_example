@@ -1,0 +1,28 @@
+---
+# master Playbook
+
+- name: Launch an Ubuntu 12.04 instance in a VPC Subnet
+  hosts: localhost
+  gather_facts: false
+  connection: local
+
+  # Default number of instances to launch
+  vars:
+    count: 1
+
+  vars_files:
+    - vars/aws_vars.yml
+
+  roles:
+    - ec2_backend_subnet
+
+
+- name: Configure new Instance(s) with the common Role
+  hosts: launched
+  sudo: True
+  remote_user: ubuntu
+  gather_facts: True
+
+  roles:
+    - common
+
