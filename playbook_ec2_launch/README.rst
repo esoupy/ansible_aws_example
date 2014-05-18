@@ -36,4 +36,7 @@ To Launch more than 1 at a time, you can specify the count from the CLI
 ::
     ansible-playbook -i hosts play_ec2_launch.yml --extra-vars="count=5"
 
-
+The default instance type is a t1.micro, to specify a different type:
+::
+    ansible-playbook -i hosts play_ec2_launch.yml --extra-vars="type=m3.xlarge"
+    
